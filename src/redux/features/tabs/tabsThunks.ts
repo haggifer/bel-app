@@ -7,7 +7,7 @@ export const getTabs = createAsyncThunk<ITab[], undefined>(
     try {
       await new Promise((res, rej) => setTimeout(res, 1000))
 
-      // Get data from API
+      // Get data from an API
       // const response = await apiProvider.request<ITab[]>({
       //   method: 'get',
       //   url: `/tabs`,
