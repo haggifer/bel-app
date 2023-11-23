@@ -67,7 +67,7 @@ export default function LazyTabs(): ReactElement {
 
   const loadFile = async (path: string) => {
     try {
-      await new Promise((res, rej) => setTimeout(res, 1000))
+      await new Promise((res) => setTimeout(res, 1000))
 
       return await import(`../../${path}`);
     } catch (error) {
