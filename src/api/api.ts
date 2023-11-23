@@ -11,7 +11,9 @@ export interface ISerializableError {
 }
 
 export const apiProvider = axios.create({
-  baseURL: `${process.env.REACT_APP_SERVER_API}`,
+  baseURL: process.env.NODE_ENV === 'production' ?
+    process.env.REACT_APP_API_ENDPOINT_PROD :
+    process.env.REACT_APP_API_ENDPOINT_LOCAL,
 })
 
 apiProvider.interceptors.response.use(response => {

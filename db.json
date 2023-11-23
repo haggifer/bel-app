@@ -1,9 +1,0 @@
-{
-  "tabs": [
-    {"id": "sectionA", "title": "Section A", "order": 2, "path": "tabs/SectionA.tsx"},
-    {"id": "sectionB", "title": "Section B", "order": 4, "path": "tabs/SectionB.tsx"},
-    {"id": "sectionC", "title": "Section C", "order": 5, "path": "tabs/SectionC.tsx"},
-    {"id": "sectionD", "title": "Section D", "order": 1, "path": "tabs/SectionD.tsx"},
-    {"id": "sectionE", "title": "Section E", "order": 3, "path": "tabs/SectionX.tsx"}
-  ]
-}

@@ -10,12 +10,12 @@ import React, {
 } from 'react';
 import { useNavigate, useParams } from "react-router-dom"
 import classes from "./LazyTabs.module.scss";
-import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
-import { selectTabs } from "../../../../redux/selectors/tabs";
-import { useEffectOnce } from "../../../../utils/hooks/useEffectOnce";
-import { getTabs } from "../../../../redux/features/tabs/tabsThunks";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { selectTabs } from "../../../redux/selectors/tabs";
+import { useEffectOnce } from "../../../utils/hooks/useEffectOnce";
+import { getTabs } from "../../../redux/features/tabs/tabsThunks";
 import classNames from "classnames";
-import CenteredCircleLoader from "../../../../components/common/CenteredCircleLoader/CenteredCircleLoader";
+import CenteredCircleLoader from "../../common/CenteredCircleLoader/CenteredCircleLoader";
 import LoadErrorComponent from "./LoadErrorComponent";
 
 export default function LazyTabs(): ReactElement {
@@ -69,10 +69,10 @@ export default function LazyTabs(): ReactElement {
     try {
       await new Promise((res, rej) => setTimeout(res, 1000))
 
-      return await import(`../../../../components/${path}`);
+      return await import(`../../${path}`);
     } catch (error) {
       return {
-        default: () => <LoadErrorComponent path={`../../../../${path}`}/>,
+        default: () => <LoadErrorComponent path={`../../${path}`}/>,
       };
     }
   }

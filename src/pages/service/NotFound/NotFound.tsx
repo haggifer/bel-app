@@ -23,10 +23,12 @@ export default function NotFound(): ReactElement {
         <div className={classes.buttons}>
           <button
             onClick={goPrevPage}
-          >Go Back</button>
+          >Go Back
+          </button>
           <button
             onClick={goHome}
-          >Go Home</button>
+          >Go Home
+          </button>
         </div>
       </div>
     </div>
