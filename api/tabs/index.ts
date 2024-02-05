@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { MongoClient } from "mongodb";
+import { MongoClient } from 'mongodb';
 
 const MONGODB_URI = process.env.REACT_APP_MONGODB_URI;
 

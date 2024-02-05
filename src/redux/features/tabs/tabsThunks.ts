@@ -1,6 +1,6 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import { ITab } from "../../../typescript/entities";
-import { apiProvider } from "../../../api/api";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { ITab } from '../../../typescript/entities';
+import { apiProvider } from '../../../api/api';
 
 export const getTabs = createAsyncThunk<ITab[], undefined>(
   'tabs/get',
@@ -12,12 +12,11 @@ export const getTabs = createAsyncThunk<ITab[], undefined>(
         headers: {
           'Content-Type': 'application/json',
         },
-      })
+      });
 
-      return response.data
-    } catch
-      (err) {
-      return rejectWithValue(err)
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(err);
     }
-  }
-)
+  },
+);

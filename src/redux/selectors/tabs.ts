@@ -1,3 +1,3 @@
-import { RootState } from "../store";
+import { RootState } from '../store';
 
 export const selectTabs = (state: RootState) => state.tabs;
