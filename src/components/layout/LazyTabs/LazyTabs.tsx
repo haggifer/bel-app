@@ -81,7 +81,7 @@ export default function LazyTabs(): ReactElement {
 
   return tabs.loading ? (
     <CenteredCircleLoader />
-  ) : !tabs.data ? (
+  ) : !tabs.data?.length ? (
     <p>
       <strong>No tabs available!</strong>
     </p>
