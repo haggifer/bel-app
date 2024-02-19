@@ -15,8 +15,8 @@ import { selectTabs } from '../../../redux/selectors/tabs';
 import { useEffectOnce } from '../../../utils/hooks/useEffectOnce';
 import { getTabs } from '../../../redux/features/tabs/tabsThunks';
 import classNames from 'classnames';
-import CenteredCircleLoader from '../../common/CenteredCircleLoader/CenteredCircleLoader';
 import LoadErrorComponent from './LoadErrorComponent';
+import CircleLoader from '../../common/CircleLoader/CircleLoader';
 
 export default function LazyTabs(): ReactElement {
   const dispatch = useAppDispatch();
@@ -80,7 +80,7 @@ export default function LazyTabs(): ReactElement {
   };
 
   return tabs.loading ? (
-    <CenteredCircleLoader />
+    <CircleLoader centered={true} />
   ) : !tabs.data?.length ? (
     <p>
       <strong>No tabs available!</strong>
@@ -103,7 +103,7 @@ export default function LazyTabs(): ReactElement {
       </div>
 
       <div className={classes.content}>
-        <Suspense fallback={<CenteredCircleLoader />}>
+        <Suspense fallback={<CircleLoader centered={true} />}>
           {CurrentContent && <CurrentContent />}
         </Suspense>
       </div>
